@@ -43,7 +43,7 @@ function saveHtml() {
 		cards.push(genCard.generateHtml(cardObj));
 	})
 
-	fs.writeFile('index.html', genHTML.generateHtml(cards.toString()), function (err) {
+	fs.writeFile('./output/index.html', genHTML.generateHtml(cards.toString()), function (err) {
 		if (err) return console.log(err);
 		console.log('Generated Html');
 	});
